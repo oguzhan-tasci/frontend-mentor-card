@@ -1,36 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Product preview card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:ital,wght@0,500;0,600;0,700;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Product preview card component</title>
 
-  Preview
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --dark-syan: hsl(158, 36%, 37%);
+        --cream: hsl(30, 38%, 92%);
+        --dark-blue: hsl(212, 21%, 14%);
+        --dark-grayish-blue: hsl(228, 12%, 48%);
+        --white: hsl(0, 0%, 100%);
+        --font-paragh: 14px;
+        --francus: "Fraunces", serif;
+        --monstserrat: "Montserrat", sans-serif;
+      }
+      body {
+        background-color: var(--cream);
+      }
+      .cart {
+        width: 90%;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .wrapper {
+        background-color: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 50%;
+        border-radius: 5% 5% 5% 5%;
+      }
+      .image-side {
+      }
+      .image-side img {
+        height: 500px;
+        width: 300px;
+        object-fit: cover;
+        border-radius: 5% 0 0 5%;
+      }
+      .information-side {
+        margin: 2rem 3rem;
+        display: flex;
+        flex-direction: column;
+      }
+      .information-side > * {
+        margin: 1rem 0;
+      }
+      .information-side h1 {
+        font-family: var(--francus);
+      }
+      .information-side p {
+        font-size: var(--font-paragh);
+        word-spacing: 5px;
+        line-height: 22px;
+        font-family: var(--monstserrat);
+        color: var(--dark-grayish-blue);
+      }
+      .information-side .price {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .information-side .price .active {
+        font-family: var(--francus);
+        font-size: 28px;
+        color: var(--dark-syan);
+      }
+      .information-side .price .passive {
+        font-family: var(--monstserrat);
+        font-size: 18px;
+        text-decoration: line-through;
+      }
+      .information-side button {
+        padding: 1rem;
+        /* border: none; */
+        border-radius: 6%;
+        border: 1px transparent ;
+        background-color: var(--dark-syan);
+        color: var(--white);
+        font-family: var(--monstserrat);
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cart">
+      <div class="wrapper">
+        <div class="image-side">
+          <img src="images/image-product-desktop.jpg" alt="" />
+        </div>
+        <div class="information-side">
+          <h1>Gabrielle Essence Eau De Parfum</h1>
+          <p>
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <div class="price">
+            <span class="active">$149.99</span>
+            <span class="passive">$169.99</span>
+          </div>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
